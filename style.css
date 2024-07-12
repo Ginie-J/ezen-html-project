@@ -56,12 +56,10 @@ ul.right-nav{
     padding: 0;
     list-style-type: none;
     width: 250px;
-    height: 120px;
 }
 ul.right-nav li{
     float: right;
     text-align: center;
-    font-weight: 500;
 }
 ul.right-nav li:first-child{
     width: 180px;
@@ -164,7 +162,6 @@ ul.ul-subnav{
     padding: 0;
     margin: 0;
     font-size: 15px;
-    font-weight: 500;
 }
 .ul-subnav a{
     color: #666;
@@ -178,6 +175,7 @@ ul.ul-subnav{
 .hero{
     padding-left: 60px;
     position: relative;
+    height: 520px;
 }
 .hero-img{
     width: 100%;
@@ -232,24 +230,29 @@ ul.ul-subnav{
 }
 /* campaign 섹션 시작 */
 .campaign{
-    padding-top: 400px;
+    margin-top: 70px;
     position: relative;
 }
 .campaign::before{
     content: "CAMPAIGN";
     position: absolute;
-    font-weight: 900;
-    font-size: 200px;
+    font-weight: 700;
+    font-size: 180px;
     color: rgba(0, 0, 0, 0.3);
-    z-index: 0;
-    top: 700px;
+    z-index: -1;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
 }
 .col-3{
     width: 30%;
     float: left;
-    position: absolute;
+}
+.col-right{
+    padding-right: 50px;
+}
+.col-left{
+    padding-left: 50px;
 }
 .main-campaign1{
     width: 380px;
@@ -260,18 +263,13 @@ ul.ul-subnav{
     width: 250px;
     margin-bottom: 60px;
 }
-.offset-left{
+.offset-left-3{
     margin-left: 20%;
 }
-.offset-right{
+.offset-right-3{
     margin-right: 20%;
 }
-.col-right{
-    padding-right: 50px;
-}
-.col-left{
-    padding-left: 50px;
-}
+
 .campaign h5{
     text-transform: uppercase;
     color: #00b1b0;
