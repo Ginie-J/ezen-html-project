@@ -1,15 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url(fonts.css);
 *{box-sizing: border-box;}
 body{
-    font-family: "Pretendard" sans-serif;
+    font-family: "Noto Sans KR" "Pretendard" sans-serif;
     color: black;
     margin: 0;
+    margin-top: 70px;
 }
 header{
     position: fixed;
     width: 100%;
     padding-left: 60px;
     padding-right: 0;
+    z-index: 3;
+    top: 0;
+    left: 0;
 }
 header img{
     height: 50px;
@@ -122,17 +127,178 @@ ul.main-nav li{
 }
 .sub-nav{
     padding: 40px;
-    background-color: #ddd;
+    background-color: #fff;
     position: absolute;
-    top: 70px;
+    top: 0;
     left: 0;
     width: 100%;
 }
-.container{
-    max-width: 1200px;
+.sub-navi{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    z-index: 3;
+    transform: scaleY(0);
+    transition: transform 0.5s;
 }
-ul.sub-nav{
-    margin: 0;
-    padding: 0;
+.main-navi:hover .sub-navi{
+    transform: scaleY(1);
+}
+.sub-container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 50px 40px;
+}
+.sub-col{
+    float: left;
+    width: 20%;
+}  
+.sub-col h2{
+    text-align: left;
+    font-size: 18px;
+}
+ul.ul-subnav{
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+.ul-subnav a{
+    color: #666;
+    display: block;
+    line-height: 40px;
+}
+.ul-subnav a:hover{
+    color: #00b1b0;
+}
+/* header 끝 Hero 시작 */
+.hero{
+    padding-left: 60px;
+    position: relative;
+}
+.hero-img{
+    width: 100%;
+    height: 470px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+}
+.hero-img img{
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+}
+.backcolor{
+    width: 80%;
+    height: 400px;
+    background: #00b1b0;
+    transform: rotate(-2deg);
+    margin-left: 30px;
+    position: absolute;
+    top: 83px;
+}
+.hero-text{
+    position: absolute;
+    z-index: 5;
+    color: #fff;
+    font-weight: 800;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.hero-bigtext{
+    font-size: 60px;
+    margin: 0;
+}
+.hero-button{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 150px;
+    bottom: 80px;
+    background-color: #00b1b0;
+    color: #fff;
+    font-size: 20px;
+    z-index: 7;
+    font-weight: 800;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.hero-button:hover{
+    background-color: #032e86;
+}
+/* campaign 섹션 시작 */
+.campaign{
+    padding-top: 400px;
+    position: relative;
+}
+.campaign::before{
+    content: "CAMPAIGN";
+    position: absolute;
+    font-weight: 900;
+    font-size: 200px;
+    color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    top: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.col-3{
+    width: 30%;
+    float: left;
+    position: absolute;
+}
+.main-campaign1{
+    width: 380px;
+    float: right;
+    margin-top: 80px;
+}
+.main-campaign2{
+    width: 250px;
+    margin-bottom: 60px;
+}
+.offset-left{
+    margin-left: 20%;
+}
+.offset-right{
+    margin-right: 20%;
+}
+.col-right{
+    padding-right: 50px;
+}
+.col-left{
+    padding-left: 50px;
+}
+.campaign h5{
+    text-transform: uppercase;
+    color: #00b1b0;
+    font-size: 16px;
+}
+.campaign h2{
+    font-size: 45px;
+    font-weight: 800;
+}
+.campaign p{
+    width: 340px;
+}
+.campaign h3{
+    font-size: 20px;
+    font-weight: 800;
+}
+.remo-a{
+    font-weight: 700;   
+}
+.remo-a span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #00b1b0;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
 }
